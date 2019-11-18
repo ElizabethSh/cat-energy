@@ -1,4 +1,36 @@
+.page-header {
+  .mobile-center ();
+}
+
 .page-header__logo {
-  margin: 11px 20px;
   display: block;
+  .mobile-center ();
+  padding: 11px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    width: 710px;
+    align-items: center;
+    min-height: 90px;
+  }
+
+  .page-header__logo {
+    margin: 0;
+    padding: 0;
+    width: 174px;
+    height: 59px;
+    align-items: flex-end; /*???*/
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1220px;
+    min-height: 90px;
+    padding-top: 20px;
+    align-items: flex-end;
+  }
 }

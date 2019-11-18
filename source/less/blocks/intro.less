@@ -1,18 +1,24 @@
 .intro {
+  padding-top: 1px; /*???*/
+}
+
+.intro__wrapper {
+  .mobile-center ();
   background-color: @green;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  position: relative;
   min-height: 305px;
-  padding-top: 1px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .intro__title {
   .regular-font(36px; 36px; 400);
-  color: white;
+  color: @white;
   text-align: center;
   margin: 27px;
+  box-sizing: border-box;
 }
 
 .intro__slogan {
@@ -38,4 +44,74 @@
   .regular-font (14px; 18px; 400);
   background-color: @green;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .intro__wrapper {
+    width: 709px;
+    min-height: 790px;
+    background-color: @white;
+    background-image: none;
+    padding-top: 50px;
+    padding-left: 90px;
+  }
+
+  .intro__title {
+    color: @black;
+    .regular-font(60px; 60px; 400);
+    text-align: left;
+    width: 415px;
+    margin: 0;
+  }
+
+  .intro__slogan {
+    margin-top: 35px;
+    color: @black;
+    text-align: left;
+    .regular-font(20px; 20px; 400);
+  }
+
+  .intro__image {
+    width: 675px;
+    top: 250px;
+    left: 30px;
+  }
+
+  .intro__button {
+    top: 270px;
+    left: 90px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__wrapper {
+    width: 1220px;
+    min-height: 590px;
+  }
+
+  .intro__image-wrapper {
+    background-color: @green;
+    width: 720px;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-top: -420px;
+    margin-left: 520px;
+  }
+
+  .intro__title {
+    margin-top: 60px;
+  }
+
+  .intro__image {
+    width: 552px;
+    left: 450px;
+    top: 30px;
+  }
+
+  .intro__button {
+    left: 80px;
+    top: 350px;
+  }
 }
