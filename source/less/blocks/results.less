@@ -2,6 +2,8 @@
   padding: 20px;
   padding-right: 22px;
   background-color: @lightgrey;
+  box-sizing: border-box;
+  .mobile-center (); /*temp*/
 }
 
 .results__title {
@@ -11,4 +13,17 @@
 
 .results__description {
   font-family: "Arial", sans-serif;
+}
+
+@media (min-width: @tablet-width) { /*temp*/
+  .results {/*temp*/
+    width: 768px;/*temp*/
+    background-color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {/*temp*/
+  .results {/*temp*/
+    width: 1220px;/*temp*/
+  }
 }

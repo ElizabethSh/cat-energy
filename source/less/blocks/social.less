@@ -4,11 +4,16 @@
 }
 
 .social__list {
-  padding: 0;
+  .list-reset();
   margin: 20px auto;
   width: 130px;
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    border: none;
+  }
 }
