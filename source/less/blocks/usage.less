@@ -1,12 +1,11 @@
 .usage__wrapper {
   .mobile-center ();
-  padding: 0 19px;
-  box-sizing: border-box;
+  padding: 16px 20px;
 }
 
 .usage__title {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .usage__list {
@@ -17,12 +16,75 @@
 
 .usage__item {
   padding: 0;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
+  position: relative;
 }
 
 .usage__description {
   margin: 0;
   font-family: "Arial", sans-serif;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+    top: -4px;
+    left: -80px;
+  }
+}
+
+.usage__item:nth-child(1) .usage__description::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 29px;
+  background-color: @green;
+  top: 11px;
+  left: -64px;
+  background-image: url("../img/advantage-leaf@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.usage__item:nth-child(2) .usage__description::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 31px;
+  background-color: @green;
+  top: 10px;
+  left: -65px;
+  background-image: url("../img/advantage-powder@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.usage__item:nth-child(3) .usage__description::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 30px;
+  background-color: @green;
+  top: 12px;
+  left: -63px;
+  background-image: url("../img/advantage-dining@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.usage__item:nth-child(4) .usage__description::after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 31px;
+  background-color: @green;
+  top: 11px;
+  left: -64px;
+  background-image: url("../img/advantage-clock@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
@@ -51,7 +113,6 @@
     box-sizing: border-box;
     min-height: 270px; /*temp*/
     margin-bottom: 40px;
-    border: 1px solid blue;
   }
 
   .usage__description {

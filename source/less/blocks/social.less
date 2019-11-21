@@ -5,8 +5,8 @@
 
 .social__list {
   .list-reset();
-  margin: 20px auto;
-  width: 130px;
+  margin: 24px 60px 15px 72px;
+  width: 125px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -15,5 +15,17 @@
 @media (min-width: @tablet-width) {
   .social {
     border: none;
+  }
+}
+
+.social__link--icon {
+  fill: @icon-grey;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

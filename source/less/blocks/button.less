@@ -8,3 +8,17 @@
   display: block;
   box-sizing: border-box;
 }
+
+.button--green {
+  color: @white;
+  background-color: @green;
+
+  &:hover {
+    background-color: @darkgreen-btn;
+  }
+
+  &:active {
+    background-color: @darkgreen-btn;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

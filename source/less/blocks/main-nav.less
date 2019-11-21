@@ -5,9 +5,68 @@
   .mobile-center ();
 }
 
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+    margin-right: 20px;
+    .regular-font(18px; 25px; 400);
+  }
+}
+
 .main-nav__toggle {
   position: absolute;
-  left: 200px;
+  top: 0;
+  right: 0;
+
+  background-color: @white;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: 20px;
+
+  width: 24px;
+  height: 2px;
+  background-color: @icon-black;
+  box-shadow: 0 8px 0 0 @icon-black, 0 16px 0 0 @icon-black;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    width: 24px;
+    height: 2px;
+    background-color: @icon-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -17,40 +76,20 @@
   flex-direction: column;
 }
 
-.main-nav__item {
-  border-bottom: 1px solid @border-grey;
-  padding: 23px;
-  display: inline-block;
-
-  &:first-child {
-    border-top: 1px solid @border-grey;
-  }
-}
-
-.main-nav__link {
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: @black;
-  text-align: center;
-  vertical-align: middle;
-}
-
-
 @media (min-width: @tablet-width) {
-  .main-nav {
-    width: auto;
-    margin: 0;
-    margin-right: 20px;
-    .regular-font(18px; 25px; 400);
-  }
-
   .main-nav__list {
     width: 450px;
     flex-direction: row;
     justify-content: space-between;
   }
+}
 
+.main-nav__item {
+  border-bottom: 1px solid @border-grey;
+  display: inline-block;
+}
+
+@media (min-width: @tablet-width) {
   .main-nav__item {
     padding: 0;
     border: none;
@@ -58,6 +97,26 @@
     &:first-child {
       border-top: none;
     }
+  }
+}
+
+.main-nav__link {
+  display: block;
+  padding: 23px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.main-nav__link[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
