@@ -1,7 +1,4 @@
 .button {
-  padding: 10px 5px;
-  width: 280px;
-  min-height: 40px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -20,5 +17,13 @@
   &:active {
     background-color: @darkgreen-btn;
     color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .button {
+    width: 280px;
+    padding: 10px 5px;
+    min-height: 40px;
   }
 }
