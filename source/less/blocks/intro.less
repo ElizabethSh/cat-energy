@@ -21,6 +21,14 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .intro__wrapper {
+    padding-left: 80px;
+    width: 1220px;
+    min-height: 590px;
+  }
+}
+
 .intro__title {
   .regular-font(36px; 36px; 400);
   color: @white;
@@ -38,6 +46,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .intro__title {
+    margin-top: 53px;
+  }
+}
+
 .intro__slogan {
   margin-top: 25px;
   color: @white;
@@ -49,10 +63,23 @@
 
 @media (min-width: @tablet-width) {
   .intro__slogan {
-    margin-top: 42px;
+    margin-top: 40px;
     color: @black;
     text-align: left;
     .regular-font(20px; 20px; 400);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__image-wrapper {
+    background-color: @green;
+    width: 720px;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-top: -423px;
+    margin-left: 528px;
   }
 }
 
@@ -69,6 +96,14 @@
     width: 675px;
     top: 255px;
     left: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__image {
+    width: 552px;
+    left: 450px;
+    top: 30px;
   }
 }
 
@@ -93,34 +128,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .intro__wrapper {
-    width: 1220px;
-    min-height: 590px;
-  }
-
-  .intro__image-wrapper {
-    background-color: @green;
-    width: 720px;
-    height: 696px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-    margin-top: -420px;
-    margin-left: 520px;
-  }
-
-  .intro__title {
-    margin-top: 60px;
-  }
-
-  .intro__image {
-    width: 552px;
-    left: 450px;
-    top: 30px;
-  }
-
   .intro__button {
     left: 80px;
-    top: 350px;
+    top: 344px;
   }
 }

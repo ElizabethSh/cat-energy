@@ -12,6 +12,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .main-products__list {
+    width: 1220px;
+  }
+}
+
 .main-products__item {
   padding: 0 20px 21px;
   border-top: 1px solid @border-grey;
@@ -22,7 +28,7 @@
   .main-products__item {
     padding: 163px 37px 30px;
     width: 324px;
-    min-height: 430px;
+    min-height: 431px;
     margin: 30px;
     margin-top: 112px;
     border: none;
@@ -37,6 +43,19 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .main-products__item {
+    width: 245px;
+    margin: 0;
+    margin-top: 142px;
+    margin-right: 80px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
 .main-products__info {
   display: flex;
   align-items: center;
@@ -47,6 +66,12 @@
     width: 250px;
     flex-direction: column;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-products__info {
+    width: 165px;
   }
 }
 
@@ -107,6 +132,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .main-products__table {
+    width: 169px;
+  }
+}
+
 .main-products__value {
   text-align: right;
 }
@@ -118,6 +149,12 @@
 @media (min-width: @tablet-width) {
   .main-products_to-order {
     padding: 10px 6px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-products_to-order {
+    width: 169px;
   }
 }
 
@@ -151,6 +188,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .main-products__all-title {
+    margin-bottom: 25px;
+  }
+}
+
 .main-products__all-description {
   margin: 0;
   margin-bottom: 22px;
@@ -164,6 +207,13 @@
     margin: 0 auto 87px;
     .regular-font(16px; 16px; 400);
     width: 170px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-products__all-description {
+    .regular-font(16px; 20px; 400);
+    margin-bottom: 82px;
   }
 }
 
@@ -187,21 +237,8 @@
   }
 }
 
-/*@media (min-width: @desktop-width) {
-  .main-products__list {
-    width: 1300px;
-  }
-
-  .main-products__item {
-    width: 245px;
-    margin: 40px;
-  }
-
-  .main-products_to-order {
-    width: 169px;
-  }
-
+@media (min-width: @desktop-width) {
   .main-products__to-all {
     width: 169px;
   }
-}*/
+}

@@ -10,6 +10,15 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    width: 1220px;
+    min-height: 90px;
+    padding-top: 29px;
+    align-items: center;
+  }
+}
+
 .page-header__logo {
   display: block;
   .mobile-center ();
@@ -40,10 +49,9 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__wrapper {
-    width: 1220px;
-    min-height: 90px;
-    padding-top: 20px;
-    align-items: flex-end;
+  .page-header__logo {
+    margin-top: 24px;
+    width: 203px;
+    height: 60px;
   }
 }

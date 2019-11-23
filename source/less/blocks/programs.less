@@ -8,6 +8,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .programs {
+    padding-top: 43px;
+  }
+}
+
 .programs__list {
   .list-reset();
   .mobile-center ();
@@ -20,6 +26,13 @@
 @media (min-width: @tablet-width) {
   .programs__list {
     width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
+    width: 1220px;
+    flex-direction: row;
   }
 }
 
@@ -36,6 +49,14 @@
     margin-top: 30px;
     min-height: 372px;
     padding: 76px 275px 60px 53px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__item {
+    width: 570px;
+    min-height: 372px; /*temp*/
+    padding: 77px 52px 55px;
   }
 }
 
@@ -63,13 +84,27 @@
     margin: 0;
     margin-bottom: 25px;
     .regular-font (36px; 37px; 400);
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      left: 448px;
+      top: 90px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__title {
+    margin-left: 162px;
+    margin-bottom: 73px;
   }
 
   .programs__title::before {
-    width: 200px;
-    height: 200px;
-    left: 448px;
-    top: 90px;
+    width: 100px;
+    height: 100px;
+    left: 52px;
+    top: 47px;
   }
 }
 
@@ -94,6 +129,15 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .programs__item:first-child .programs__title::after {
+    width: 71px;
+    height: 97px;
+    top: 41px;
+    left: 66px;
+  }
+}
+
 .programs__item:last-child .programs__title::after {
   background-image: url("../img/icon-cat-pro.svg");
   background-position: left;
@@ -115,16 +159,19 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .programs__item:last-child .programs__title::after {
+    width: 134px;
+    height: 57px;
+    top: 69px;
+    left: 34px;
+  }
+}
+
 .programs__description {
   font-family: "Arial", sans-serif;
   padding-bottom: 22px;
   border-bottom: 1px solid @programs-border-grey;
-}
-
-@media (min-width: @tablet-width) {
-  .programs__item:last-child .programs__description {
-    width: 340px;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -133,6 +180,24 @@
     border: none;
     color: #444444;
     padding-bottom: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__description {
+    padding-bottom: 13px;
+  }
+}
+
+@media (min-width: @tablet-width) { /*???*/
+  .programs__item:last-child .programs__description {  /*???*/
+    width: 340px;  /*???*/
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__item:last-child .programs__description {
+    width: auto;
   }
 }
 
@@ -180,15 +245,3 @@
     }
   }
 }
-/*
-@media (min-width: @desktop-width) {
-  .programs__list {
-    width: 1220px;
-    flex-direction: row;
-  }
-
-  .programs__item {
-    width: 570px;
-    min-height: 372px; /*temp*//*
-  }
-}*/
