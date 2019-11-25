@@ -28,8 +28,88 @@
         </nav>
       </div>
     </header>
-    <main>
-
+    <main class="page-main">
+      <h1 class="page__title page-main__title">Подбор программы</h1>
+      <section class="order">
+        <h2 class="visually-hidden">Фильтр для подбора программы питания</h2>
+        <p class="order__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="order__cats-data">
+            <p>
+              <label for="cat-name">Имя:*</label>
+              <input type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+            </p>
+            <p>
+              <label for="cat-weight">Вес (кг):*</label>
+              <input type="text" name="cat-weight" id="cat-weight" placeholder="7">
+            </p>
+            <p>
+              <label for="cat-age">Возраст (лет):</label>
+              <input type="text" name="cat-age" id="cat-age" placeholder="7">
+            </p>
+          </fieldset>
+          <fieldset class="order__program-choice">
+            <ul class="order__list">
+              <li class="order__item">
+                <input type="radio" name="program-choise" id="to-loose-weight" value="loose-weight" checked>
+                <label for="to-loose-weight">Похудение</label>
+              </li>
+              <li class="order__item">
+                <input type="radio" name="program-choise" id="to-gain-weight" value="gain-weight">
+                <label for="to-gain-weight">Набор массы</label>
+              </li>
+              <li class="order__item">
+                <input type="radio" name="program-choise" id="need-advice" value="need-advice">
+                <label for="need-advice">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="order__owners-contacts">
+            <legend class="order__title">Контактные данные (владельца кота)</legend>
+            <p>
+              <label for="email">E-mail:*</label>
+              <input type="email" name="email" id="email" value="" placeholder="kuklachev@gmail.com">
+            </p>
+            <p>
+              <label for="phone">Телефон:*</label>
+              <input type="tel" name="phone" id="phone" value="" placeholder="8 (960) 900-60-90">
+            </p>
+          </fieldset>
+          <fieldset class="order__comment">
+            <legend class="order__title">Комментарий</legend>
+            <textarea name="comment" rows="8" cols="80">Расскажите обо всех повадках кота</textarea>
+          </fieldset>
+          <fieldset class="order__additional">
+            <legend class="order__title">Дополнительно</legend>
+            <ul>
+              <li class="order__item">
+                <input type="checkbox" name="sugar-substitute" id="sugar-substitute" checked>
+                <label for="sugar-substitute">Сахарозаменитель</label>
+              </li>
+              <li class="order__item">
+                <input type="checkbox" name="water" id="water">
+                <label for="water">Питьевая вода</label>
+              </li>
+              <li class="order__item">
+                <input type="checkbox" name="milk" id="milk">
+                <label for="milk">Молоко</label>
+              </li>
+              <li class="order__item">
+                <input type="checkbox" name="vitamins" id="vitamins">
+                <label for="vitamins">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="order__button button button--green" type="submit">Отправить заявку</button>
+          <small class="order__legend">* — Обязательные поля</small>
+        </form>
+      </section>
+      <section class="contacts">
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <img class="contacts__map" src="img/bg-map-desktop@1x.png" width="1440" height="400" alt="Адрес местоположеия: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
