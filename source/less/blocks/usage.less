@@ -1,17 +1,13 @@
 .usage__wrapper {
   .mobile-center();
-  padding: 16px 20px;
-}
+  padding: 16px 20px 14px;
 
-@media (min-width: @tablet-width) {
-  .usage__wrapper {
+  @media (min-width: @tablet-width) {
     width: 710px;
     padding: 0;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .usage__wrapper {
+  @media (min-width: @desktop-width) {
     width: 1220px;
     padding: 0;
   }
@@ -19,18 +15,14 @@
 
 .usage__title {
   margin: 0;
-  margin-bottom: 27px;
-}
+  margin-bottom: 28px;
 
-@media (min-width: @tablet-width) {
-  .usage__title {
+  @media (min-width: @tablet-width) {
     .regular-font (60px; 60px; 400);
     margin-top: 45px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .usage__title {
+  @media (min-width: @desktop-width) {
     margin-top: 75px;
   }
 }
@@ -39,10 +31,8 @@
   .list-reset ();
   margin-left: 75px;
   padding: 5px;
-}
 
-@media (min-width: @tablet-width) {
-  .usage__list {
+  @media (min-width: @tablet-width) {
     margin: 0;
     padding: 0;
     margin-top: 50px;
@@ -56,12 +46,10 @@
 
 .usage__item {
   padding: 0;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   position: relative;
-}
 
-@media (min-width: @tablet-width) {
-  .usage__item {
+  @media (min-width: @tablet-width) {
     width: 325px;
     box-sizing: border-box;
     margin-bottom: 107px;
@@ -78,10 +66,8 @@
       z-index: -1;
     }
   }
-}
 
-@media (min-width: @desktop-width) {
-  .usage__item {
+  @media (min-width: @desktop-width) {
     width: 245px;
     min-height: 250px;
     padding: 131px 40px 10px 0;
@@ -96,6 +82,11 @@
   height: 31px;
   top: 11px;
   left: -65px;
+
+  @media (min-width: @tablet-width) {
+    top: 47px;
+    left: 25px;
+  }
 }
 
 .usage__item:nth-child(1) .usage__description::after {
@@ -122,13 +113,6 @@
   background-repeat: no-repeat;
 }
 
-@media (min-width: @tablet-width) {
-  .usage__item .usage__description::after {
-    top: 47px;
-    left: 25px;
-  }
-}
-
 .usage__description {
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -142,10 +126,8 @@
     top: -4px;
     left: -80px;
   }
-}
 
-@media (min-width: @tablet-width) {
-  .usage__description {
+  @media (min-width: @tablet-width) {
     .regular-font (16px; 24px; 400);
     width: 245px;
 
