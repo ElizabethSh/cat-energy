@@ -8,6 +8,11 @@
   position: relative;
   padding-top: 27px;
 
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: cover;
+  }
+
   @media (min-width: @tablet-width) {
     width: 709px;
     min-height: 807px; /*не убирать*/
@@ -19,6 +24,7 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
+    padding-top: 47px;
     width: 1220px;
     min-height: 590px;
   }
@@ -68,26 +74,31 @@
     background-repeat: no-repeat;
     margin-top: -423px;
     margin-left: 528px;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: 720px auto;
+    }
   }
 }
 
 .intro__image {
   position: absolute;
   display: block;
-  top: 163px;
-  left: 0;
-  width: 300px;
+  top: 166px;
+  left: 20px;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
-    width: 675px;
+    width: 709px;
     top: 255px;
-    left: 35px;
+    left: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 552px;
     left: 450px;
-    top: 30px;
+    top: 21px;
   }
 }
 
@@ -110,6 +121,6 @@
 
   @media (min-width: @desktop-width) {
     left: 80px;
-    top: 344px;
+    top: 334px;
   }
 }
