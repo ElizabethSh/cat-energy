@@ -1,11 +1,15 @@
-.intro__wrapper {
-  .mobile-center ();
-  background-color: @green;
+.intro {
+  background-color: #64a83b;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   min-height: 305px;
   position: relative;
+}
+
+.intro__wrapper {
+  .mobile-center ();
+  width: 320px;
   padding-top: 27px;
 
   @media (min-resolution: @retina-dppx) {
@@ -86,7 +90,8 @@
   position: absolute;
   display: block;
   top: 166px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 280px;
 
   @media (min-width: @tablet-width) {
@@ -106,7 +111,8 @@
   position: absolute;
   display: block;
   top: 439px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   .regular-font (14px; 18px; 400);
   box-sizing: border-box;
 

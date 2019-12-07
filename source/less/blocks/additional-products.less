@@ -1,5 +1,5 @@
 .additional-products {
-  .mobile-center ();
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -17,22 +17,13 @@
 }
 
 .additional-products__header {
-  margin: 30px auto 32px;
-  width: 280px;
+  margin: 30px 20px -12px 0;
+  padding: 0 6%;
+  width: 71%;
+  max-width: 240px;
   .regular-font(24px; 24px; 400);
   position: relative;
-
-  &::after {
-    @media (max-width: @mobile-width-only) {
-      content: "";
-      width: 53px;
-      height: 3px;
-      background-color: @green;
-      position: absolute;
-      top: 13px;
-      right: -20px;
-    }
-  }
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -42,7 +33,6 @@
     position: absolute;
     top: -25px;
     left: 28px;
-    background-color: @white;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,8 +42,10 @@
 }
 
 .additional-products__list {
+  border-top: 3px solid @green;
   .list-reset ();
-  margin: 0 19px 0 21px;
+  margin: 0;
+  padding-top: 43px;
 
   @media (min-width: @tablet-width) {
     margin: 92px 30px 0;
@@ -68,16 +60,8 @@
 
 .additional-products__item {
   padding-top: 0;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
   box-sizing: border-box;
-
-  &:last-child {
-    border-bottom: 1px solid @border-grey;
-  }
-
-  @media (max-width: @mobile-width-only) {
-    border-top: 1px solid @border-grey;
-  }
 
   @media (min-width: @tablet-width) {
     padding: 25px 38px;
@@ -100,8 +84,9 @@
 .additional-products__title {
   .regular-font(16px; 16px; 400);
   text-transform: uppercase;
-  margin-top: 14px;
+  margin-top: 12px;
   margin-bottom: 13px;
+  width: 88%;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -114,12 +99,15 @@
 }
 
 .additional-products__description {
+  .mobile-center();
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  font-family: "Arial", sans-serif;
-  .regular-font(14px; 14px; 400);
-  color: #444444;
   margin-bottom: 15px;
+
+  @media (max-width: @mobile-width-only) {
+    border-top: 1px solid @border-grey;
+  }
 
   @media (min-width: @tablet-width) {
     .regular-font(16px; 20px; 400);
@@ -137,6 +125,9 @@
 
 .additional-products__description p {
   margin: 0;
+  font-family: "Arial", sans-serif;
+  .regular-font(14px; 14px; 400);
+  color: #444444;
 }
 
 .additional-products__field {
@@ -159,6 +150,7 @@
 
 .additional-products__button {
   .regular-font(16px; 20px; 400);
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 633px;
@@ -174,12 +166,13 @@
 }
 
 .additional-products__present {
-  margin: 38px 20px 36px;
-  background-color: @green;
+  margin: 38px auto 36px;
+  background-color: #6fb346;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  width: 280px;
+  background-size: cover;
+  width: 88%;
   height: 289px;
   position: relative;
 

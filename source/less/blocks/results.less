@@ -1,4 +1,6 @@
 .results {
+  width: auto;
+
   @media (max-width: @mobile-width-only) {
     background-color: @lightgrey;
   }
@@ -11,7 +13,7 @@
 
 .results__wrapper {
   .mobile-center ();
-  padding: 17px 20px;
+  padding-top: 17px;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -96,7 +98,7 @@
   border: 1px solid #cdcdcd;
   text-align: center;
   box-sizing: border-box;
-  width: 124px;
+  width: 44%;
   padding-top: 13px;
 
   @media (min-width: @tablet-width) {
@@ -117,14 +119,16 @@
   text-align: center;
   box-sizing: border-box;
   background-color: @lightgrey;
-  width: 80px;
+  width: 25%;
   height: 22px;
   position: absolute;
   top: -11px;
-  left: 20px;
+  left: 22%;
+  transform: translateX(-50%);
 
   &:last-child {
-    left: 178px;
+    left: 78%;
+    transform: translateX(-50%);
   }
 
   @media (min-width: @tablet-width) {
