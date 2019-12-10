@@ -10,7 +10,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 55px 110px 67px;
+    margin: 55px 8% 67px;
     padding: 0;
     width: 325px;
   }
@@ -25,6 +25,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 15px auto 0;
+    padding-right: 0;
     display: flex;
     justify-content: space-between;
     margin-bottom: 69px;
@@ -59,13 +60,13 @@
   }
 }
 
-.order__cats-data .order__form--item:last-child {
+.order__cats-data .order__input-item:last-child {
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
   }
 }
 
-.order__form--item {
+.order__input-item {
   margin: 0;
   margin-bottom: 14px;
   width: 100%;
@@ -83,7 +84,7 @@
   }
 }
 
-.order__form--item input {
+.order__input-item input {
   margin-left: 15px;
   padding: 14px 14px 12px;
   min-height: 45px;
@@ -295,7 +296,7 @@
   }
 }
 
-.order__owners-contacts .order__form--item {
+.order__owners-contacts .order__input-item {
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -304,7 +305,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    width: 571px;
+    /*width: 571px;*/
   }
 }
 
@@ -313,10 +314,6 @@
   right: 17px;
   top: auto;
   fill: @icon-black;
-
-  @media (min-width: @tablet-width) {
-    left: 595px;
-  }
 }
 
 .order__owners-contacts input:active + svg {
@@ -361,7 +358,7 @@
   @media (min-width: @tablet-width) {
     padding: 10px 0;
     margin: 0 auto;
-    width: 630px;
+    width: 82%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -376,7 +373,7 @@
 
 .order__additional--list .order__item {
   @media (min-width: @tablet-width) {
-    width: 227px;
+    width: 36%;
     margin-left: 58px;
     margin-bottom: 52px;
   }
@@ -437,6 +434,7 @@
   margin: 15px auto;
   .regular-font (16px; 18px; 400);
   cursor: pointer;
+  width: 88%;
 
   @media (min-width: @tablet-width) {
     margin: 2px 60px 73px 70px;
