@@ -8,6 +8,10 @@
     background-position: top center;
     background-repeat: no-repeat;
   }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+  }
 }
 
 .intro__wrapper {
@@ -22,7 +26,7 @@
 
   @media (min-width: @tablet-width) {
     width: 709px;
-    min-height: 807px; /*не убирать*/
+    height: 807px; /*не убирать*/
     background-color: @white;
     background-image: none;
     padding-top: 57px;
@@ -33,7 +37,7 @@
     padding-left: 80px;
     padding-top: 47px;
     width: 1220px;
-    min-height: 590px;
+    height: 590px;
   }
 }
 
@@ -73,18 +77,19 @@
 
 .intro__image-wrapper {
   @media (min-width: @desktop-width) {
-    background-color: @green;
-    width: 720px;
+    background-color: #64a83b;
+    width: 50%;
     height: 696px;
     background-image: url("../img/index-background-desktop@1x.jpg");
-    background-position: top center;
+    background-position: 0 0;
     background-repeat: no-repeat;
-    margin-top: -423px;
-    margin-left: 528px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
 
     @media (min-resolution: @retina-dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");
-      background-size: 720px auto;
     }
   }
 }
@@ -104,8 +109,8 @@
 
   @media (min-width: @desktop-width) {
     width: 552px;
-    left: 450px;
-    top: 21px;
+    left: 16%;
+    top: 141px;
   }
 }
 
@@ -117,6 +122,7 @@
   transform: translateX(-50%);
   .regular-font (14px; 18px; 400);
   box-sizing: border-box;
+  width: 88%;
 
   @media (min-width: @tablet-width) {
     .regular-font (20px; 20px; 400);
@@ -129,7 +135,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 80px;
-    top: 334px;
+    top: 455px;
+    left: 21.5%;
   }
 }
