@@ -22,9 +22,12 @@
 
 .main-products__item {
   padding-bottom: 21px;
+  padding-left: 6%;
+  padding-right: 5%;
   border-top: 1px solid @border-grey;
   box-sizing: border-box;
   position: relative;
+  width: 100%;
 
   &:last-child {
     border-bottom: 1px solid @border-grey;
@@ -32,10 +35,9 @@
 
   @media (min-width: @tablet-width) {
     padding: 163px 37px 30px;
-    min-width: 324px;
-    width: 46%;
+    width: 45.5%;
     min-height: 431px;
-    margin-right: 8%;
+    margin-right: auto;
     margin-bottom: 30px;
     margin-top: 110px;
     border: none;
@@ -52,6 +54,7 @@
     margin: 0;
     margin-top: 142px;
     margin-right: 80px;
+    /*padding: 163px 20px 30px; проверить!*/
 
     &:nth-child(4n) {
       margin-right: 0;
@@ -60,31 +63,30 @@
 }
 
 .main-products__item:nth-child(2n) {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
     margin-right: 0;
   }
 }
 
 .main-products__info {
-  width: 88%;
-  margin: 0 auto;
+  /* width: 88%;*/
+  /*margin: 0 auto;*/
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    min-width: 250px;
-    width: 32%;
+    width: 100%;
     flex-direction: column;
-    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    width: 165px;
+    width: 169px;
+    /*margin: 0;*/
   }
 }
 
-.main-products__info img {
+.main-products__image img {
   @media (min-width: @tablet-width) {
     width: 324px;
     position: absolute;
@@ -114,8 +116,7 @@
 .main-products__title {
   margin: 0;
   .regular-font(16px; 20px; 400);
-  width: 45%;
-  min-width: 75px;
+  width: 75px;
   margin-bottom: 12px;
 
   @media (min-width: @tablet-width) {
@@ -127,11 +128,15 @@
 }
 
 .main-products__description {
-  width: 45%;
+  width: 50%;
 
   @media (min-width: @tablet-width) {
     width: 100%;
   }
+
+  /*@media (min-width: @desktop-width) {
+    width: 169px;
+  }*/
 }
 
 .main-products__table {
@@ -143,7 +148,6 @@
   border-collapse: collapse;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
     .regular-font(16px; 16px; 400);
     margin-bottom: 30px;
   }
@@ -161,7 +165,7 @@
 
 .main-products__table td {
   @media (min-width: @tablet-width) {
-    padding: 8px 0;
+    padding: 7px 0 8px;
   }
 }
 
@@ -212,6 +216,7 @@
     @media (min-width: @tablet-width) {
       width: 61px;
       height: 61px;
+      top: 55px;
     }
   }
 
