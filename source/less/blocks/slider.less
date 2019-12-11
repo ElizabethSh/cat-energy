@@ -1,5 +1,16 @@
 .slider {
   .list-reset ();
+  width: 100%;
+  min-height: 328px; /*temp*/
+}
+
+.slider__item {
+  @media (min-width: @tablet-width) {
+    background-color: @lightgrey;
+    min-height: 462px;
+    margin-top: 255px;
+    position: relative;
+  }
 }
 
 .slider li:last-child { /*temp*/
@@ -7,5 +18,11 @@
 }
 
 .slider__image {
-  margin-left: -20px;
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -170px;
+    left: 50%;
+    transform: translateX(-49%);
+    width: 690px;
+  }
 }

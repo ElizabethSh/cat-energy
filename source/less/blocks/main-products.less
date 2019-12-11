@@ -1,12 +1,17 @@
+.main-products {
+  width: auto;
+}
+
 .main-products__list {
   .list-reset();
-  .mobile-center();
+  margin: 0 auto;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: 92%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 39px;
+    margin-bottom: 59px;
   }
 
   @media (min-width: @desktop-width) {
@@ -16,9 +21,13 @@
 }
 
 .main-products__item {
-  padding: 0 18px 21px 20px;
+  padding-bottom: 21px;
+  padding-left: 6%;
+  padding-right: 5%;
   border-top: 1px solid @border-grey;
   box-sizing: border-box;
+  position: relative;
+  width: 100%;
 
   &:last-child {
     border-bottom: 1px solid @border-grey;
@@ -26,13 +35,13 @@
 
   @media (min-width: @tablet-width) {
     padding: 163px 37px 30px;
-    width: 324px;
+    width: 45.5%;
     min-height: 431px;
-    margin: 30px;
+    margin-right: auto;
+    margin-bottom: 30px;
     margin-top: 110px;
     border: none;
     background-color: @lightgrey;
-    position: relative;
 
     &:last-child {
       background-color: @white;
@@ -45,6 +54,7 @@
     margin: 0;
     margin-top: 142px;
     margin-right: 80px;
+    /*padding: 163px 20px 30px; проверить!*/
 
     &:nth-child(4n) {
       margin-right: 0;
@@ -52,22 +62,31 @@
   }
 }
 
-.main-products__info {
-  display: flex;
-  align-items: center;
-
-  @media (min-width: @tablet-width) {
-    width: 250px;
-    flex-direction: column;
-    margin: 0 auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 165px;
+.main-products__item:nth-child(2n) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-right: 0;
   }
 }
 
-.main-products__info img {
+.main-products__info {
+  /* width: 88%;*/
+  /*margin: 0 auto;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 169px;
+    /*margin: 0;*/
+  }
+}
+
+.main-products__image img {
   @media (min-width: @tablet-width) {
     width: 324px;
     position: absolute;
@@ -108,16 +127,27 @@
   }
 }
 
+.main-products__description {
+  width: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  /*@media (min-width: @desktop-width) {
+    width: 169px;
+  }*/
+}
+
 .main-products__table {
   margin: 0;
-  width: 142px;
+  width: 100%;
   font-family: "Arial", sans-serif;
   .regular-font(12px; 14px; 400);
   color: #444444;
   border-collapse: collapse;
 
   @media (min-width: @tablet-width) {
-    width: 250px;
     .regular-font(16px; 16px; 400);
     margin-bottom: 30px;
   }
@@ -135,15 +165,23 @@
 
 .main-products__table td {
   @media (min-width: @tablet-width) {
-    padding: 8px 0;
+    padding: 7px 0 8px;
   }
 }
+
+/*.main-products__table tbody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1 1 0;
+}*/
 
 .main-products__value {
   text-align: right;
 }
 
 .main-products_to-order {
+  margin: 0 auto;
   .regular-font(16px; 20px; 400);
 
   @media (min-width: @tablet-width) {
@@ -162,24 +200,30 @@
   text-align: center;
   .regular-font(16px; 20px; 400);
 
+  &::before {
+    background-image: url("../img/icon-plus.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.2;
+
+    @media (min-width: @tablet-width) {
+      width: 61px;
+      height: 61px;
+      top: 55px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0 auto 27px;
     .regular-font(20px; 20px; 400);
     width: 135px;
-
-    &::before {
-      background-image: url("../img/icon-plus.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 61px;
-      height: 61px;
-      position: absolute;
-      content: "";
-      top: 54px;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0.2;
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -207,6 +251,7 @@
 }
 
 .main-products__to-all {
+  margin: 0 auto;
   background-color: @lightgrey;
   color: #444444;
   .regular-font(16px; 20px; 400);

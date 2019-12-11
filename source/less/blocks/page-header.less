@@ -1,23 +1,25 @@
 .page-header__wrapper {
-  .mobile-center ();
+  width: auto;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    width: 710px;
+    width: 92%;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    width: 85%;
     min-height: 90px;
-    padding-top: 29px;
+    padding-top: 30px;
     align-items: center;
   }
 }
 
 .page-header__logo {
+  box-sizing: border-box;
   display: block;
-  .mobile-center ();
+  width: 100%;
   padding: 12px 20px;
   border-bottom: 1px solid @border-grey;
 

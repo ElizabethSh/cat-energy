@@ -2,31 +2,21 @@
   background-color: @lightgrey;
 }
 
-@media (min-width: @tablet-width) {
-  .page-footer {
-    padding-top: 40px 0;
-  }
-}
-
 .page-footer__wrapper {
   .mobile-center ();
-  padding: 24px 20px;
-}
+  padding: 24px 0;
 
-@media (min-width: @tablet-width) {
-  .page-footer__wrapper {
+  @media (min-width: @tablet-width) {
     margin: 0 auto;
-    padding: 40px 0;
-    width: 708px;
+    padding: 44px 0 35px;
+    width: 92%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .page-footer__wrapper {
+  @media (min-width: @desktop-width) {
     width: 1220px;
   }
 }
