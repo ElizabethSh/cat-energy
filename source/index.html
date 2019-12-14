@@ -106,22 +106,31 @@
               </tr>
             </table>
           </div>
-          <ul class="results__slider slider">
-            <li class="slider__item">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img class="slider__image" src="img/before-desktop@1x.png" srcset="img/before-mobile@2x.png 2x" width="636" height="517" alt="Фото толстого кота">
-              </picture>
-            </li>
-            <li class="slider__item">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                <img class="slider__image" src="img/after-desktop@1x.png" srcset="img/after-mobile@2x.png 2x" width="636" height="517" alt="Фото худого кота">
-              </picture>
-            </li>
-          </ul>
+          <div class="results__slider slider">
+            <ul class="slider__list">
+              <li class="slider__item">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="slider__image" src="img/before-desktop@1x.png" srcset="img/before-mobile@2x.png 2x" width="636" height="517" alt="Фото толстого кота">
+                </picture>
+              </li>
+              <li class="slider__item">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="slider__image" src="img/after-desktop@1x.png" srcset="img/after-mobile@2x.png 2x" width="636" height="517" alt="Фото худого кота">
+                </picture>
+              </li>
+            </ul>
+            <div class="slider__controls">
+              <div class="slider__scale">
+                <div class="slider__toggle"></div>
+              </div>
+              <button class="slider__button slider__button--before" type="button">Было</button>
+              <button class="slider__button slider__button--after" type="button">Стало</button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="contacts contacts--index">
