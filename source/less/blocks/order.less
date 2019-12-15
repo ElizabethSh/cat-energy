@@ -91,7 +91,8 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
-  font: inherit;
+  font-family: inherit;
+  .regular-font (16px; 18px; 400);
   color: #444444;
   text-transform: uppercase;
   background-color: transparent;
@@ -99,7 +100,8 @@
   flex: 1 1 0;
 
   @media (min-width: @tablet-width) {
-    padding: 17px 18px 13px;
+    padding: 10px 18px 9px;
+    .regular-font (20px; 20px; 400);
   }
 
   @media (min-width: @desktop-width) {
@@ -108,11 +110,6 @@
 
   &::placeholder {
     color: #444444;
-    .regular-font (16px; 18px; 400);
-
-    @media (min-width: @tablet-width) {
-      .regular-font (20px; 20px; 400);
-    }
   }
 
   &:hover,
@@ -129,6 +126,12 @@
   }
 }
 
+.order__input-item input[type="email"]::-ms-clear,
+.order__input-item input[type="tel"]::-ms-clear,
+.order__input-item input[type="text"]::-ms-clear {
+  display: none;     /*Убирает Х в полях ввода в IE*/
+}
+
 .order__program-choice {
   border: none;
   border-bottom: 1px solid #ededed;
@@ -136,7 +139,7 @@
   margin-bottom: 8px;
 
   @media (min-width: @tablet-width) {
-    margin: 53px 68px 77px 70px;
+    margin: 50px 50px 77px 70px;
     border: 1px solid rgba(205, 205, 205, 0.5);
   }
 
@@ -286,7 +289,7 @@
   }
 }
 
-.order__owners-contacts--title {
+.order__title--owners-contacts {
   padding-top: 20px;
   padding-right: 5%;
 
@@ -336,6 +339,7 @@
   text-transform: uppercase;
   color: #444444;
   resize: none;
+  overflow: auto;
 
 
   @media (min-width: @tablet-width) {
@@ -352,7 +356,7 @@
   }
 }
 
-.order__additional--list {
+.order__list--additional {
   padding: 34px 20px 0 49px;
 
   @media (min-width: @tablet-width) {
@@ -371,7 +375,7 @@
   }
 }
 
-.order__additional--list .order__item {
+.order__list--additional .order__item {
   @media (min-width: @tablet-width) {
     width: 36%;
     margin-left: 58px;
