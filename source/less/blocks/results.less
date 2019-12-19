@@ -37,7 +37,7 @@
   @media (min-width: @tablet-width) {
     width: 708px;
     margin: 0 auto;
-    margin-bottom: 255px;
+    margin-bottom: 250px;
   }
 
   @media (min-width: @desktop-width) {
@@ -83,17 +83,19 @@
   }
 }
 
+/*table*/
+
 .results__table {
   width: 100%;
   border-collapse: collapse;
 
   @media (min-width: @tablet-width) {
     width: 708px;
+    display: block; /*для IE*/
   }
 
   @media (min-width: @desktop-width) {
     width: 400px;
-    display: block;
   }
 }
 
@@ -109,7 +111,6 @@
 .results__table tr {
   display: flex;
   justify-content: space-between;
-  height: 56px;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -118,7 +119,11 @@
 }
 
 .results__table td {
-  display: block;
+  display: block; /*для IE*/
+}
+
+.results__row-value {
+  height: 56px;
 }
 
 .results__value {
@@ -142,6 +147,25 @@
   }
 }
 
+.results__row-field {
+  box-sizing: border-box;
+  width: 88%;
+  margin: -8px auto 0;
+
+  @media (min-width: @tablet-width) {
+    width: 48%;
+    margin: -8px 5px 0 13px;
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    width: 85%;
+    margin-top: -10px;
+    margin-left: 14px;
+  }
+}
+
 .results__field {
   font-family: "Arial", sans-serif;
   .regular-font (12px; 12px; 400);
@@ -149,38 +173,25 @@
   text-align: center;
   box-sizing: border-box;
   background-color: @lightgrey;
-  width: 25%;
-  height: 22px;
-  position: absolute;
-  top: -11px;
-  left: 22%;
-  transform: translateX(-50%);
-
-  &:last-child {
-    left: 78%;
-    transform: translateX(-50%);
-  }
+  width: 35%;
+  padding: 0 3px;
+  min-height: 15px;
 
   @media (min-width: @tablet-width) {
     background-color: @white;
     .regular-font (14px; 14px; 400);
-    width: 115px;
-    left: -285px;
-    top: 62px;
-
-    &:last-child {
-      left: -80px;
-      width: 140px;
-    }
+    width: 135px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     background-color: @lightgrey;
+    min-width: 114px;
   }
 }
 
 .results__costs {
-  margin: -23px auto 0;
+  margin: 18px auto 32px;
   .regular-font (14px; 20px; 400);
   text-transform: uppercase;
   width: 190px;
@@ -194,13 +205,15 @@
     text-align: right;
     width: 180px;
     flex-direction: column;
+    order: 1;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-top: 50px;
+    margin-top: 43px;
     width: 328px;
     text-align: left;
     flex-direction: row;
+    order: 2;
   }
 }
