@@ -112,9 +112,9 @@
               </tr>
             </table>
           </div>
-          <div class="results__slider slider">
+          <div class="results__slider slider slider__left slider__no-js">
             <ul class="slider__list">
-              <li class="slider__item">
+              <li class="slider__item slider__item--before">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
@@ -124,7 +124,7 @@
                   <img class="slider__image" src="img/before-desktop@1x.png" srcset="img/before-mobile@2x.png 2x" width="636" height="517" alt="Фото толстого кота">
                 </picture>
               </li>
-              <li class="slider__item">
+              <li class="slider__item slider__item--after">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
@@ -139,8 +139,8 @@
               <div class="slider__scale">
                 <div class="slider__toggle"></div>
               </div>
-              <button class="slider__button slider__button--before" type="button">Было</button>
-              <button class="slider__button slider__button--after" type="button">Стало</button>
+              <button class="slider__button slider__button--before" id="slide-before" type="button">Было</button>
+              <button class="slider__button slider__button--after" id="slide-after" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -202,6 +202,7 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/slider.min.js"></script>
   </body>
 </html>
