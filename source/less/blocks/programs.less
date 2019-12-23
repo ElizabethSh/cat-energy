@@ -162,14 +162,13 @@
   }
 }
 
-@media (min-width: @tablet-width) { /*???*/
-  .programs__item--to-gain-weight .programs__description {  /*???*/
-    width: 340px;  /*???*/
-  }
-}
 
-@media (min-width: @desktop-width) {
-  .programs__item--to-gain-weight .programs__description {
+.programs__item--to-gain-weight .programs__description {
+  @media (min-width: @tablet-width) {
+    width: 340px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: auto;
   }
 }
@@ -200,7 +199,7 @@
     width: 25px;
     height: 12px;
     left: 116px;
-    bottom: 25px;
+    bottom: 23px;
 
     @media (min-width: @tablet-width) {
       left: 182px;
@@ -210,6 +209,7 @@
 
   &:hover::after {
     width: 34px;
+    background-image: url("../img/right-arrow-verylong-icon.svg");
   }
 
   &:active::after {
