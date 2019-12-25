@@ -22,9 +22,12 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
-  right: 0;
-  background-color: @white;
+  top: -45px;
+  right: 19px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
   cursor: pointer;
   border: none;
 
@@ -36,8 +39,8 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: -40px;
-  right: 20px;
+  top: 2px;
+  right: 0;
 
   width: 24px;
   height: 2px;
@@ -50,8 +53,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: -30px;
-    right: 20px;
+    top: 10px;
+    right: 0;
     width: 24px;
     height: 2px;
     background-color: @icon-black;
@@ -66,15 +69,21 @@
   }
 }
 
-@media (max-width: @mobile-width-only) {
-  .main-nav--closed {
+.main-nav--closed .main-nav__list {
+  @media (max-width: @mobile-width-only) {
     display: none;
   }
 }
 
-@media (max-width: @mobile-width-only) {
-  .main-nav--nojs .main-nav__toggle {
+.main-nav--nojs .main-nav__toggle {
+  @media (max-width: @mobile-width-only) {
     display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
   }
 }
 
@@ -92,7 +101,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 33px;
+    margin-top: 30px;
     width: 480px;
   }
 }
@@ -100,6 +109,7 @@
 .main-nav__item {
   border-bottom: 1px solid @border-grey;
   display: inline-block;
+  vertical-align: middle;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -156,20 +166,20 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .main-nav__link--index {
+.main-nav__link--index {
+  @media (min-width: @desktop-width) {
     color: @white;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .main-nav__item--active {
+.main-nav__item--active {
+  @media (min-width: @tablet-width) {
     border-bottom: 2px solid @green;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .main-nav__item--active .main-nav__link--index {
+.main-nav__item--active .main-nav__link--index {
+  @media (min-width: @desktop-width) {
     border-bottom: 2px solid @white;
   }
 }

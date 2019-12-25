@@ -10,7 +10,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 55px 8% 67px;
+    margin: 55px 7.5% 66px;
     padding: 0;
     width: 325px;
   }
@@ -21,8 +21,6 @@
 }
 
 .order__wrapper {
-  padding-right: 17px;
-
   @media (min-width: @desktop-width) {
     margin: 15px auto 0;
     padding-right: 0;
@@ -44,13 +42,13 @@
 }
 
 .order__cats-data {
-  padding: 0 0 7px 17px;
+  padding: 0 17px 7px 17px;
   border: none;
   border-bottom: 1px solid #ededed;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 0 49px 0 72px;
+    padding: 0 66px 0 72px;
     border: none;
   }
 
@@ -104,10 +102,6 @@
     .regular-font (20px; 20px; 400);
   }
 
-  @media (min-width: @desktop-width) {
-    padding-bottom: 14px;
-  }
-
   &::placeholder {
     color: #444444;
   }
@@ -139,7 +133,7 @@
   margin-bottom: 8px;
 
   @media (min-width: @tablet-width) {
-    margin: 50px 50px 77px 70px;
+    margin: 50px 66px 77px 70px;
     border: 1px solid rgba(205, 205, 205, 0.5);
   }
 
@@ -254,9 +248,7 @@
 }
 
 .order__owners-contacts {
-  padding-top: 30px;
-  padding-left: 1px;
-  padding-bottom: 14px;
+  padding: 30px 20px 14px 1px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -303,20 +295,23 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    margin: 20px 49px 22px 70px;
+    margin: 20px 66px 22px 70px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    /*width: 571px;*/
   }
 }
 
 .order__owners-contacts svg {
   position: absolute;
-  right: 17px;
-  top: auto;
+  right: 15px;
+  top: 17px;
   fill: @icon-black;
+
+  @media (min-width: @desktop-width) {
+    right: 17px;
+  }
 }
 
 .order__owners-contacts input:active + svg {
@@ -421,7 +416,7 @@
   left: -42px;
   width: 22px;
   height: 17px;
-  background-image: url("../img/icon-tick.svg");
+  background-image: url("../img/tick-icon.svg");
 
   @media (min-width: @tablet-width) {
     top: 2px;
@@ -435,13 +430,13 @@
 
 .order__button {
   border: none;
-  margin: 15px auto;
+  margin: 16px auto;
   .regular-font (16px; 18px; 400);
   cursor: pointer;
   width: 88%;
 
   @media (min-width: @tablet-width) {
-    margin: 2px 60px 73px 70px;
+    margin: 2px 60px 70px 70px;
     .regular-font (20px; 20px; 400);
     width: 283px;
     min-height: 52px;

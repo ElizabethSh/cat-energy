@@ -94,7 +94,7 @@
 
 
 .programs__item--to-loose-weight .programs__title::after {
-  background-image: url("../img/icon-cat-slim.svg");
+  background-image: url("../img/cat-slim-icon.svg");
   background-position: left;
   background-repeat: no-repeat;
   position: absolute;
@@ -120,7 +120,7 @@
 }
 
 .programs__item--to-gain-weight .programs__title::after {
-  background-image: url("../img/icon-cat-pro.svg");
+  background-image: url("../img/cat-pro-icon.svg");
   background-position: left;
   background-repeat: no-repeat;
   position: absolute;
@@ -162,14 +162,13 @@
   }
 }
 
-@media (min-width: @tablet-width) { /*???*/
-  .programs__item--to-gain-weight .programs__description {  /*???*/
-    width: 340px;  /*???*/
-  }
-}
 
-@media (min-width: @desktop-width) {
-  .programs__item--to-gain-weight .programs__description {
+.programs__item--to-gain-weight .programs__description {
+  @media (min-width: @tablet-width) {
+    width: 340px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: auto;
   }
 }
@@ -194,13 +193,13 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/icon-right-arrow-long.svg");
+    background-image: url("../img/right-arrow-long-icon.svg");
     background-position: left;
     background-repeat: no-repeat;
     width: 25px;
     height: 12px;
     left: 116px;
-    bottom: 25px;
+    bottom: 23px;
 
     @media (min-width: @tablet-width) {
       left: 182px;
@@ -210,6 +209,7 @@
 
   &:hover::after {
     width: 34px;
+    background-image: url("../img/right-arrow-verylong-icon.svg");
   }
 
   &:active::after {
