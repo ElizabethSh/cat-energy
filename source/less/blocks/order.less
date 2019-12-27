@@ -2,6 +2,7 @@
   margin: 0 30px 36px;
   margin-left: 6%;
   text-transform: uppercase;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     .regular-font (20px; 30px; 400);
@@ -10,9 +11,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 55px 7.5% 66px;
+    margin: 55px auto 66px;
     padding: 0;
-    width: 325px;
+    padding-right: 850px;
+    width: 1220px;
   }
 }
 
@@ -22,11 +24,10 @@
 
 .order__wrapper {
   @media (min-width: @desktop-width) {
-    margin: 15px auto 0;
+    margin: 15px auto 69px;
     padding-right: 0;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 69px;
     width: 1220px;
   }
 }
@@ -100,6 +101,7 @@
   @media (min-width: @tablet-width) {
     padding: 10px 18px 9px;
     .regular-font (20px; 20px; 400);
+    min-height: 51px; /*для Firefox*/
   }
 
   &::placeholder {
@@ -237,7 +239,8 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 0 70px;
+    padding-left: calc((100% - 1300px) / 2);
+    padding-right: calc((100% - 1300px) / 2);
   }
 }
 
@@ -255,7 +258,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 70px;
+    padding-left: calc((100% - 1300px) / 2);
+    padding-right: calc((100% - 1300px) / 2);
   }
 }
 
@@ -277,7 +281,6 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     margin-bottom: 55px;
-    max-width: 1440px;
   }
 }
 
@@ -446,7 +449,8 @@
 
   @media (min-width: @desktop-width) {
     width: 568px;
-    margin: 2px 80px 82px 111px;
+    margin: 2px 80px 82px 0;
+    margin-left: calc((100% - 1220px) / 2);
   }
 }
 
