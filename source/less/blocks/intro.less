@@ -31,6 +31,10 @@
     background-image: none;
     padding-top: 57px;
     padding-left: 88px;
+
+    @media (max-width: @tablet-width-max) {
+      position: relative;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -109,7 +113,7 @@
 
   @media (min-width: @desktop-width) {
     width: 552px;
-    left: 16%;
+    left: 115px;
     top: 141px;
   }
 }
@@ -127,15 +131,15 @@
   @media (min-width: @tablet-width) {
     .regular-font (20px; 20px; 400);
     top: 286px;
-    left: 31%;
-    transform: translateX(-49%);
+    left: 88px;
+    transform: none;
     width: 245px;
     min-height: 52px;
     padding: 15px 23px 10px 20px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 455px;
-    left: 21.5%;
+    position: static;
+    margin-top: 52px;
   }
 }
