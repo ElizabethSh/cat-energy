@@ -1,5 +1,5 @@
 .order__description {
-  margin: 0 30px 36px;
+  margin: 0 33px 36px;
   margin-left: 6%;
   text-transform: uppercase;
   box-sizing: border-box;
@@ -24,7 +24,7 @@
 
 .order__wrapper {
   @media (min-width: @desktop-width) {
-    margin: 15px auto 69px;
+    margin: 0 auto 69px;
     padding-right: 0;
     display: flex;
     justify-content: space-between;
@@ -36,6 +36,7 @@
   .regular-font (16px; 18px; 400);
   color: @icon-black;
   display: block;
+  flex-shrink: 0;
 
   @media (min-width: @tablet-width) {
     .regular-font (20px; 20px; 400);
@@ -85,8 +86,8 @@
 
 .order__input-item input {
   margin-left: 15px;
-  padding: 14px 14px 12px;
-  min-height: 45px;
+  padding: 14px 0 12px 9px; /*Firefox*/
+  height: 46px;
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -106,6 +107,12 @@
 
   &::placeholder {
     color: #444444;
+    .regular-font (16px; 18px; 400);
+    opacity: 1; /*для Firefox*/
+
+    @media (min-width: @tablet-width) {
+      .regular-font (20px; 20px; 400);
+    }
   }
 
   &:hover,
@@ -233,7 +240,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-bottom: 46px;
+    margin-bottom: 47px;
     padding: 0;
   }
 
@@ -291,6 +298,11 @@
   @media (min-width: @tablet-width) {
     padding-right: 40px;
     padding-top: 0;
+    margin-bottom: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 70px;
   }
 }
 
@@ -298,7 +310,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    margin: 20px 66px 22px 70px;
+    margin: 0 66px 22px 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -328,7 +340,7 @@
 .order__textarea {
   margin: 28px 0 25px 3px;
   padding: 13px 13px;
-  min-height: 150px;
+  min-height: 153px;
   width: 92%;
   box-sizing: border-box;
   border: 1px solid rgba(205, 205, 205, 0.5);
@@ -349,7 +361,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 13px 40px 65px;
+    margin: 13px 40px 66px;
     width: 1220px;
   }
 }
